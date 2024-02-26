@@ -1,0 +1,126 @@
+substitutions:
+  name: "ESPRelay-1"
+  friendly_name: "ESPRelay-1"
+
+esphome:
+  name: esphome-web-172b99
+  friendly_name: ESPRELAY-1
+
+esp8266:
+  board: d1_mini
+  early_pin_init: false
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "CHANGEME"
+
+ota:
+
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  fast_connect: true
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esphome-Web-172B99"
+    password: "CHANGEME"
+
+captive_portal:
+
+sensor:
+
+- platform: adc
+  pin: A0
+  name: "${friendly_name} Light"
+  update_interval: 5s
+
+- platform: uptime
+  name: "${friendly_name} Uptime"
+  id: uptime_seconds
+
+- platform: wifi_signal
+  name: "${friendly_name} WiFi Signal"
+
+binary_sensor:
+  - platform: status
+    name: "${friendly_name} Status"
+
+  - platform: gpio
+    pin:
+      number: 0
+      inverted: true
+      mode:
+        input: true
+    filters:
+      - delayed_on: 10ms
+    name: "${friendly_name} BUTTON"
+
+  - platform: gpio
+    pin:
+      number: 4
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+    filters:
+      - delayed_on: 10ms
+    name: "${friendly_name} INPUT1"
+
+  - platform: gpio
+    pin:
+      number: 5
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+    filters:
+      - delayed_on: 10ms
+    name: "${friendly_name} INPUT2"
+
+switch:
+  - platform: restart
+    name: "${friendly_name} restart"
+
+
+##########################################
+  - platform: gpio
+    pin: 12
+    id: Relay1
+    name: "${friendly_name} Relay1"
+    icon: "mdi:switch"
+    restore_mode: ALWAYS_OFF
+##########################################
+  - platform: gpio
+    pin: 14
+    id: Relay2
+    name: "${friendly_name} Relay2"
+    icon: "mdi:switch"
+    restore_mode: ALWAYS_OFF
+########################################
+  - platform: gpio
+    pin: 15
+    id: Relay3
+    name: "${friendly_name} Relay3"
+    icon: "mdi:switch"
+    restore_mode: ALWAYS_OFF
+########################################
+  - platform: gpio
+    id: LS1
+    name: "${friendly_name} LS1"
+    icon: "mdi:switch"
+    restore_mode: ALWAYS_OFF
+    pin: 13
+##########################################
+  - platform: gpio
+    pin: 
+      number: 2
+      inverted: true
+    id: Ledpin
+    name: "${friendly_name} LED"
+    icon: "mdi:switch"
+    restore_mode: ALWAYS_OFF
