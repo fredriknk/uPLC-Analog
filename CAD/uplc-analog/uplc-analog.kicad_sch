@@ -7,7 +7,7 @@
   (title_block
     (title "uPLC-Digital")
     (date "2024-02-22")
-    (rev "1.0.0")
+    (rev "1.1.0")
     (company "Drawn by FNB")
     (comment 1 "Thanks to https://github.com/PricelessToolkit/ESPClicker for inspiration")
   )
@@ -2002,10 +2002,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "ADC_DRDY" (shape input) (at 135.89 31.75 0) (fields_autoplaced)
+  (global_label "ADC_DRDY" (shape input) (at 120.65 71.12 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 9e1154fe-0be4-4315-b13c-13ef1ae985bf)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 148.37 31.75 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 133.13 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -3903,8 +3903,8 @@
     (pin "7" (uuid f1af78da-25ce-4f3b-819a-7ae7001c36a6))
     (pin "8" (uuid c7e3b8e6-c703-4972-b1d8-cfe07ef1be49))
     (pin "9" (uuid df7c23fc-95cd-4d50-9e7e-a5e22ab93973))
-    (pin "MP" (uuid 1ee1b73c-7659-4b4f-9b54-e9394e1a9965))
-    (pin "MP" (uuid 1ee1b73c-7659-4b4f-9b54-e9394e1a9965))
+    (pin "MP" (uuid 1ee1b73c-7659-4b4f-9b54-e9394e1a9966))
+    (pin "MP" (uuid 1ee1b73c-7659-4b4f-9b54-e9394e1a9966))
     (instances
       (project "uplc-analog"
         (path "/51bbc301-ea4a-44e0-84a7-cf42c64443ca"

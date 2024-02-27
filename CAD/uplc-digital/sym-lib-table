@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "esprelay")(type "KiCad")(uri "${KIPRJMOD}/lib/esprelay.kicad_sym")(options "")(descr ""))
-  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/lib/Library.kicad_sym")(options "")(descr ""))
-)
