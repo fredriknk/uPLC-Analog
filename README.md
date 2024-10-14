@@ -1,16 +1,14 @@
-﻿# μPLC - Digital V1.1_WORK IN PROGRESS-UNTESTED_-
+﻿# μPLC - Analog - _WORK IN PROGRESS-UNTESTED_-
 ![Front](./PICTURES/TOP.PNG)
 
 ESP micro PLC the size of a post stamp. 
 
-The uPLC-digital version is an [ESP-32-C3](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi, bluetooth module for communication and MCU, it has a 3.8-24V buck regulator, has three 2.5-25V inputs, three 2.5-25v, 100ma high speed open drain outputs through a [TBD062003](./DOCUMENTATION/2304140030_TOSHIBA-TBD62003AFWG_C114084.pdf) DMOS transistor array ic. And one protected 3.3v GPIO for onwire communication (Eg for DS18b20 sensors). The digital version allso has input voltage monitoring for battery applications. 
-
-The HO HI ports can be configured to be inputs or outputs by jumping solder bridges one each side of the IC. By default 1-3 are outputs and 4-6 are inputs. 
+The uPLC-analog version is an [ESP-32-C3](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi, bluetooth module for communication and MCU, it has a 3.8-24V buck regulator, has four single ended / two differential 0-3V analog inputs through a [ADS1115](./DOCUMENTATION/ads1115.pdf), one 12 bit 3.6msps analog dac through a [MCP4725A0T](./DOCUMENTATION/Microchip-Tech-MCP4725A0T-E-CH_C144198.pdf) , and one protected 3.3v GPIO for onwire communication (Eg for DS18b20 sensors). The analog uPLC allso has input voltage monitoring for battery applications. 
 
 [Schematic](./DOCUMENTATION/_schematic.pdf)
 
 
-[Assembly IBOM](https://htmlpreview.github.io/?https://raw.githubusercontent.com/fredriknk/uplc-digital/main/DOCUMENTATION/ibom.html)
+[Assembly IBOM](https://htmlpreview.github.io/?https://raw.githubusercontent.com/fredriknk/uplc-analog/main/DOCUMENTATION/ibom.html)
 
 ## Specifications
 | **Parameter**   | **Description**                                                     |
@@ -19,7 +17,7 @@ The HO HI ports can be configured to be inputs or outputs by jumping solder brid
 | _Current_       | TBD Wifi: ##mA, Radio Off: ##mA, Deep sleep ##uA |  
 | _Communication_ | 2.4ghz WIFI, Uart TTL                            |
 | _Baudrate_      | 115200                                                              |
-| _PCB size_      | 21x31.4mm                                                             |
+| _PCB size_      | 22x31.4mm                                                             |
 | _PCB info_      | 1.6mm FR4, HASL lead free, 4 layer               |
 | _Case size_     | XxXxXmm TBD                                                         |
 
@@ -34,14 +32,14 @@ TODO
 |_ONE-W_ | GPIO18  | Protected gpio for onewire comm |
 |_GND_ | GND | GND port for sensor connection|
 |_GND_ | GND | GND port for sensor connection |
-|_HO-06_ | GPIO10  | 25v 100ma open drain output |
-|_HO-05_ | GPIO19  | 25v 100ma open drain output |
-|_HO-04_ | GPIO3  | 25v 100ma open drain output |
-|_HI-03_ | GPIO7  | 2.5-25v input (with pulldown) |
-|_HI-02_ | GPIO6  | 2.5-25v input (with pulldown) |
-|_HI-01_ | GPIO5  | 2.5-25v input (with pulldown) |
+|_3V0_ | 3V0 | 3.0v rail for analog input connections |
+|_AOUT0_ | DAC  | i2c DAC 0-3v3 analog input  |
+|_AIN0_ | ADC1  | i2c ADC 0-3v0 analog input  |
+|_AIN1_ | ADC2  | i2c ADC 0-3v0 analog input  |
+|_AIN2_ | ADC3  | i2c ADC 0-3v0 analog input  |
+|_AIN3_ | ADC4  | i2c ADC 0-3v0 analog input  |
 |_GND_ | GND |  Ground  |
-|_4-24V_ | Buck reg |3.8-24v polarity protected input |
+|_4-24V_ | Buck reg |3.8-24v polarity protected power input |
 
 ## PCB Pictures
 ![Front](./PICTURES/OTOP.PNG)
