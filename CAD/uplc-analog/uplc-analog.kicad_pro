@@ -719,6 +719,18 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Generic",
+          "name": "Generic",
+          "show": true
         }
       ],
       "filter_string": "",
