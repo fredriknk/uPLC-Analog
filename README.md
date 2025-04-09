@@ -1,9 +1,13 @@
-﻿# μPLC - Analog - _WORK IN PROGRESS-UNTESTED_-
-![Front](./PICTURES/TOP.PNG)
+﻿# μPLC - Analog
+### Pcbway Sponsorship
+Thanks so much to [PCBWay](https://www.pcbway.com/) who offered to assemble my first prototype batch of all three [uPLC modules](https://github.com/fredriknk/uPLC-stack). They deliver awesome quality as always, see the result for yourself below.
 
-ESP micro PLC the size of a post stamp. 
+![Front](./PICTURES/uplc_analog.png)
 
-The uPLC-analog version is an [ESP-32-C3](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi, bluetooth module for communication and MCU, it has a 3.8-24V buck regulator, has four single ended / two differential 0-3V analog inputs through a [ADS1115](./DOCUMENTATION/ads1115.pdf), one 12 bit 3.6msps analog dac through a [MCP4725A0T](./DOCUMENTATION/Microchip-Tech-MCP4725A0T-E-CH_C144198.pdf) , and one protected 3.3v GPIO for onwire communication (Eg for DS18b20 sensors). The analog uPLC allso has input voltage monitoring for battery applications. 
+I now have two prototypes of the uPLC-Analog so ESP-Home integrations will come soon.
+
+
+ESP micro PLC the size of a post stamp. The uPLC-analog version is an [ESP-32-C3](./DOCUMENTATION/esp-12f_product_specification_en.pdf) wifi, bluetooth module for communication and MCU, it has a 3.8-24V buck regulator, has four single ended / two differential 0-3V analog inputs through a [ADS1115](./DOCUMENTATION/ads1115.pdf), one 12 bit 3.6msps analog dac through a [MCP4725A0T](./DOCUMENTATION/Microchip-Tech-MCP4725A0T-E-CH_C144198.pdf) , and one protected 3.3v GPIO for onwire communication (Eg for DS18b20 sensors). The analog uPLC allso has input voltage monitoring for battery applications. 
 
 [Schematic](./DOCUMENTATION/_schematic.pdf)
 
@@ -42,9 +46,11 @@ TODO
 |_4-24V_ | Buck reg |3.8-24v polarity protected power input |
 
 ## PCB Pictures
-![Front](./PICTURES/OTOP.PNG)
-![Side](./PICTURES/OLEFT.png)
-![Back](./PICTURES/OBOT.PNG)
+Pcb-assembly by [PCBWay](https://www.pcbway.com/)
+![Front](./PICTURES/u-plc-analog-cable-bottom.JPEG)
+![Side](./PICTURES/u-plc-analog-cable-top.JPEG)
+![Top](./PICTURES/IMG_0637.JPEG)
+![Bototm](./PICTURES/IMG_0635.JPEG)
 
 ## Homeassistant Implementation
 TODO
