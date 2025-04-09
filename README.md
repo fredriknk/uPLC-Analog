@@ -37,7 +37,7 @@ TODO
 |_GND_ | GND | GND port for sensor connection|
 |_GND_ | GND | GND port for sensor connection |
 |_3V0_ | 3V0 | 3.0v rail for analog input connections |
-|_AOUT0_ | DAC  | i2c DAC 0-3v3 analog input  |
+|_AOUT0_ | DAC  | i2c DAC 0-3v3 analog Output  |
 |_AIN0_ | ADC1  | i2c ADC 0-3v0 analog input  |
 |_AIN1_ | ADC2  | i2c ADC 0-3v0 analog input  |
 |_AIN2_ | ADC3  | i2c ADC 0-3v0 analog input  |
